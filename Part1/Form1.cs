@@ -12,24 +12,36 @@
 
         private void textBox1_TextChanged(object sender, EventArgs e) {
             label5.Text = $"Character count: {textBox1.Text.Length}";  //display character count
+            bool enableButton1 = false;
+            bool enableButton2 = false;
             Validator.ValidateString(textBox1.Text, label5);
 
             if (Validator.errorList[0] == "String length is within 1-40 characters.") {
                 label10.ForeColor = Color.Green;
                 label10.Text = "✅ " + Validator.errorList[0];
+                enableButton1 = true;
             }
             else {
                 label10.ForeColor = Color.Red;
                 label10.Text = "❌ " + Validator.errorList[0];
+                enableButton1 = false;
             }
 
             if (Validator.errorList[1] == "All characters are uppercase letters!") {
                 label12.ForeColor = Color.Green;
                 label12.Text = "✅ " + Validator.errorList[1];
+                enableButton2 = true;
             }
             else {
                 label12.ForeColor = Color.Red;
                 label12.Text = "❌ " + Validator.errorList[1];
+                enableButton2 = false;
+            }
+            if (enableButton1 && enableButton2) {
+                button6.Enabled = true;
+            }
+            else {
+                button6.Enabled = false;
             }
         }//textbox1_TextChanged
 
@@ -76,10 +88,35 @@
         private void textBox2_TextChanged(object sender, EventArgs e) {
 
         }
-
-
-
         private void numericUpDown1_ValueChanged(object sender, EventArgs e) {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e) {
+            textBox3.Text = "";
+            textBox2.Text = $"{Transformer.Encode(textBox1.Text, Convert.ToInt16(numericUpDown1.Value))}";
+
+            int[] inputCode;
+            inputCode = (int[])Transformer.AsciiCode(textBox1.Text);
+            foreach (int num in inputCode) {
+                textBox3.Text += num;
+            }
+
+            int[] outputCode;
+            outputCode = (int[])Transformer.AsciiCode(textBox2.Text);
+            foreach (int num in outputCode) {
+                textBox4.Text = "";
+                textBox4.Text += num;
+            }
+
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e) {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e) {
 
         }
     }
