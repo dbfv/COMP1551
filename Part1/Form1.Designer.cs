@@ -295,6 +295,7 @@ namespace Part1 {
             textBox5.ReadOnly = true;
             textBox5.Size = new Size(359, 23);
             textBox5.TabIndex = 34;
+            textBox5.Enabled = false;
             textBox5.TextChanged += textBox5_TextChanged;
             // 
             // Form1
