@@ -94,6 +94,7 @@
 
         private void button6_Click(object sender, EventArgs e) {
             textBox3.Text = "";
+            textBox4.Text = "";
             textBox2.Text = $"{Transformer.Encode(textBox1.Text, Convert.ToInt16(numericUpDown1.Value))}";
 
             int[] inputCode;
@@ -105,7 +106,6 @@
             int[] outputCode;
             outputCode = (int[])Transformer.AsciiCode(textBox2.Text);
             foreach (int num in outputCode) {
-                textBox4.Text = "";
                 textBox4.Text += num;
             }
 
