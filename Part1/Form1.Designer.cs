@@ -47,6 +47,7 @@ namespace Part1 {
             numericUpDown1 = new NumericUpDown();
             label7 = new Label();
             textBox5 = new TextBox();
+            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
@@ -110,6 +111,7 @@ namespace Part1 {
             button3.TabIndex = 14;
             button3.Text = "Copy!";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -121,6 +123,7 @@ namespace Part1 {
             button2.TabIndex = 13;
             button2.Text = "Copy!";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -285,6 +288,18 @@ namespace Part1 {
             textBox5.TabIndex = 34;
             textBox5.TextChanged += textBox5_TextChanged;
             // 
+            // button4
+            // 
+            button4.BackColor = Color.Transparent;
+            button4.ForeColor = Color.Black;
+            button4.Location = new Point(564, 303);
+            button4.Name = "button4";
+            button4.Size = new Size(83, 22);
+            button4.TabIndex = 35;
+            button4.Text = "Copy!";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 16F);
@@ -292,7 +307,8 @@ namespace Part1 {
             BackColor = Color.LightSteelBlue;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(652, 488);
+            ClientSize = new Size(652, 380);
+            Controls.Add(button4);
             Controls.Add(textBox5);
             Controls.Add(label7);
             Controls.Add(numericUpDown1);
@@ -348,6 +364,7 @@ namespace Part1 {
         private NumericUpDown numericUpDown1;
         private Label label7;
         private TextBox textBox5;
+        private Button button4;
     }
 }
                                       

@@ -46,7 +46,7 @@
         }//textbox1_TextChanged
 
         private void button1_Click(object sender, EventArgs e) {
-
+            Clipboard.SetText(textBox2.Text);
         }
 
         private void toolTip1_Popup(object sender, PopupEventArgs e) {
@@ -126,6 +126,18 @@
 
         private void textBox5_TextChanged(object sender, EventArgs e) {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e) {
+            Clipboard.SetText(textBox3.Text);
+        }
+
+        private void button3_Click(object sender, EventArgs e) {
+            Clipboard.SetText(textBox4.Text);
+        }
+
+        private void button4_Click(object sender, EventArgs e) {
+            Clipboard.SetText(textBox5.Text);
         }
     }
 }
