@@ -71,7 +71,7 @@ namespace Part1 {
             button6.Location = new Point(564, 11);
             button6.Name = "button6";
             button6.Size = new Size(83, 53);
-            button6.TabIndex = 22;
+            button6.TabIndex = 2;
             button6.Text = "PRINT";
             button6.UseVisualStyleBackColor = false;
             button6.Click += button6_Click;
@@ -108,7 +108,7 @@ namespace Part1 {
             button3.Location = new Point(564, 247);
             button3.Name = "button3";
             button3.Size = new Size(83, 22);
-            button3.TabIndex = 14;
+            button3.TabIndex = 4;
             button3.Text = "Copy!";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
@@ -120,7 +120,7 @@ namespace Part1 {
             button2.Location = new Point(564, 197);
             button2.Name = "button2";
             button2.Size = new Size(83, 22);
-            button2.TabIndex = 13;
+            button2.TabIndex = 3;
             button2.Text = "Copy!";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
@@ -132,7 +132,7 @@ namespace Part1 {
             button1.Location = new Point(564, 152);
             button1.Name = "button1";
             button1.Size = new Size(83, 22);
-            button1.TabIndex = 12;
+            button1.TabIndex = 2;
             button1.Text = "Copy!";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
@@ -144,7 +144,6 @@ namespace Part1 {
             textBox4.Name = "textBox4";
             textBox4.ReadOnly = true;
             textBox4.Size = new Size(359, 23);
-            textBox4.TabIndex = 11;
             textBox4.TextChanged += textBox4_TextChanged;
             // 
             // textBox3
@@ -154,7 +153,6 @@ namespace Part1 {
             textBox3.Name = "textBox3";
             textBox3.ReadOnly = true;
             textBox3.Size = new Size(359, 23);
-            textBox3.TabIndex = 9;
             textBox3.TextChanged += textBox3_TextChanged;
             // 
             // label3
@@ -166,7 +164,6 @@ namespace Part1 {
             label3.Location = new Point(10, 192);
             label3.Name = "label3";
             label3.Size = new Size(129, 27);
-            label3.TabIndex = 8;
             label3.Text = "Input Code: ";
             // 
             // textBox2
@@ -176,7 +173,6 @@ namespace Part1 {
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
             textBox2.Size = new Size(359, 23);
-            textBox2.TabIndex = 7;
             textBox2.TextChanged += textBox2_TextChanged;
             // 
             // label2
@@ -188,7 +184,6 @@ namespace Part1 {
             label2.Location = new Point(10, 147);
             label2.Name = "label2";
             label2.Size = new Size(163, 27);
-            label2.TabIndex = 6;
             label2.Text = "Encoded string: ";
             // 
             // label1
@@ -262,7 +257,7 @@ namespace Part1 {
             numericUpDown1.Minimum = new decimal(new int[] { 25, 0, 0, int.MinValue });
             numericUpDown1.Name = "numericUpDown1";
             numericUpDown1.Size = new Size(63, 23);
-            numericUpDown1.TabIndex = 32;
+            numericUpDown1.TabIndex = 1;
             numericUpDown1.ValueChanged += numericUpDown1_ValueChanged;
             // 
             // label7
@@ -295,7 +290,7 @@ namespace Part1 {
             button4.Location = new Point(564, 303);
             button4.Name = "button4";
             button4.Size = new Size(83, 22);
-            button4.TabIndex = 35;
+            button4.TabIndex = 5;
             button4.Text = "Copy!";
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
