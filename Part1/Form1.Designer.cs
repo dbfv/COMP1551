@@ -30,7 +30,6 @@ namespace Part1 {
             button6 = new Button();
             label6 = new Label();
             label4 = new Label();
-            button4 = new Button();
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
@@ -72,7 +71,7 @@ namespace Part1 {
             button6.Name = "button6";
             button6.Size = new Size(83, 53);
             button6.TabIndex = 22;
-            button6.Text = "RUN";
+            button6.Text = "PRINT";
             button6.UseVisualStyleBackColor = false;
             button6.Click += button6_Click;
             // 
@@ -82,7 +81,7 @@ namespace Part1 {
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Segoe UI", 14F);
             label6.ForeColor = Color.Cyan;
-            label6.Location = new Point(402, 8);
+            label6.Location = new Point(481, 6);
             label6.Name = "label6";
             label6.Size = new Size(43, 27);
             label6.TabIndex = 20;
@@ -100,17 +99,6 @@ namespace Part1 {
             label4.Size = new Size(143, 27);
             label4.TabIndex = 10;
             label4.Text = "Output Code: ";
-            // 
-            // button4
-            // 
-            button4.BackColor = Color.Transparent;
-            button4.ForeColor = Color.Black;
-            button4.Location = new Point(564, 84);
-            button4.Name = "button4";
-            button4.Size = new Size(83, 53);
-            button4.TabIndex = 15;
-            button4.Text = "PRINT";
-            button4.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -225,7 +213,7 @@ namespace Part1 {
             pictureBox1.BackColor = Color.White;
             pictureBox1.Location = new Point(10, 68);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(508, 71);
+            pictureBox1.Size = new Size(534, 71);
             pictureBox1.TabIndex = 28;
             pictureBox1.TabStop = false;
             // 
@@ -266,11 +254,11 @@ namespace Part1 {
             // 
             // numericUpDown1
             // 
-            numericUpDown1.Location = new Point(402, 36);
+            numericUpDown1.Location = new Point(481, 36);
             numericUpDown1.Maximum = new decimal(new int[] { 25, 0, 0, 0 });
             numericUpDown1.Minimum = new decimal(new int[] { 25, 0, 0, int.MinValue });
             numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(116, 23);
+            numericUpDown1.Size = new Size(63, 23);
             numericUpDown1.TabIndex = 32;
             numericUpDown1.ValueChanged += numericUpDown1_ValueChanged;
             // 
@@ -282,7 +270,7 @@ namespace Part1 {
             label7.ForeColor = Color.Cyan;
             label7.Location = new Point(10, 298);
             label7.Name = "label7";
-            label7.Size = new Size(143, 27);
+            label7.Size = new Size(126, 27);
             label7.TabIndex = 33;
             label7.Text = "Input Sort: ";
             label7.Click += label7_Click;
@@ -295,7 +283,6 @@ namespace Part1 {
             textBox5.ReadOnly = true;
             textBox5.Size = new Size(359, 23);
             textBox5.TabIndex = 34;
-            textBox5.Enabled = false;
             textBox5.TextChanged += textBox5_TextChanged;
             // 
             // Form1
@@ -315,7 +302,6 @@ namespace Part1 {
             Controls.Add(button6);
             Controls.Add(label6);
             Controls.Add(label5);
-            Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -344,7 +330,6 @@ namespace Part1 {
         private Label label6;
         private Label label4;
         private TextBox textBox6;
-        private Button button4;
         private Button button3;
         private Button button2;
         private Button button1;
