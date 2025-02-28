@@ -11,44 +11,29 @@
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e) {
-
             label5.Text = $"Character count: {textBox1.Text.Length}";  //display character count
             Validator.ValidateString(textBox1.Text, label5);
-            if (Validator.errorList[0] == "✅") {
+
+            if (Validator.errorList[0] == "String length is within 1-40 characters.") {
                 label10.ForeColor = Color.Green;
-                label10.Text = Validator.errorList[0] + "  String length is within 1-40 characters.";
+                label10.Text = "✅ " + Validator.errorList[0];
             }
             else {
                 label10.ForeColor = Color.Red;
-                label10.Text = Validator.errorList[0] + " String length must be within 1-40 characters!";
+                label10.Text = "❌ " + Validator.errorList[0];
             }
 
-            if (Validator.errorList[1] == "✅") {
+            if (Validator.errorList[1] == "All characters are uppercase letters!") {
                 label12.ForeColor = Color.Green;
-                label12.Text = Validator.errorList[1] + "  All characters are uppercase letters!";
+                label12.Text = "✅ " + Validator.errorList[1];
             }
             else {
                 label12.ForeColor = Color.Red;
-                label12.Text = Validator.errorList[1] + " Only uppercase letters are acceptable!";
+                label12.Text = "❌ " + Validator.errorList[1];
             }
-
-
         }//textbox1_TextChanged
 
         private void button1_Click(object sender, EventArgs e) {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e) {
-            try {
-                int N = Convert.ToInt16(textBox6.Text);
-                if (N < -25 || N > 25) {
-
-                }
-            }
-            catch {
-
-            }
 
         }
 
@@ -91,8 +76,15 @@
         private void textBox2_TextChanged(object sender, EventArgs e) {
 
         }
+
+
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e) {
+
+        }
     }
 }
+
 
 
 

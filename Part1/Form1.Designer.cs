@@ -1,4 +1,6 @@
-﻿namespace Part1 {
+﻿using System.Windows.Forms;
+
+namespace Part1 {
     partial class Form1 {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +30,6 @@
             button6 = new Button();
             label6 = new Label();
             label4 = new Label();
-            textBox6 = new TextBox();
             button4 = new Button();
             button3 = new Button();
             button2 = new Button();
@@ -48,7 +49,10 @@
             pictureBox1 = new PictureBox();
             label10 = new Label();
             label12 = new Label();
+            label13 = new Label();
+            numericUpDown1 = new NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
             // label5
@@ -97,15 +101,6 @@
             label4.Size = new Size(158, 29);
             label4.TabIndex = 10;
             label4.Text = "Output Code: ";
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(460, 41);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(83, 25);
-            textBox6.TabIndex = 18;
-            textBox6.TextAlign = HorizontalAlignment.Center;
-            textBox6.TextChanged += textBox6_TextChanged;
             // 
             // button4
             // 
@@ -292,12 +287,35 @@
             label12.AutoSize = true;
             label12.BackColor = Color.White;
             label12.ForeColor = Color.Red;
-            label12.Location = new Point(12, 100);
+            label12.Location = new Point(12, 98);
             label12.Name = "label12";
             label12.Size = new Size(302, 18);
             label12.TabIndex = 30;
             label12.Text = "❌ Only uppercase characters are acceptable!";
             label12.Click += label12_Click;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.BackColor = Color.White;
+            label13.ForeColor = Color.Blue;
+            label13.Location = new Point(12, 118);
+            label13.Name = "label13";
+            label13.Size = new Size(445, 18);
+            label13.TabIndex = 31;
+            label13.Text = "ℹ️ N is in interval [-25, 25]";
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(460, 41);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(132, 25);
+            numericUpDown1.TabIndex = 32;
+            numericUpDown1.Minimum = -25;
+            numericUpDown1.Maximum = 25;
+            numericUpDown1.Increment = 1;
+            numericUpDown1.DecimalPlaces = 0;
+            numericUpDown1.ValueChanged += numericUpDown1_ValueChanged;
             // 
             // Form1
             // 
@@ -307,6 +325,8 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(745, 549);
+            Controls.Add(numericUpDown1);
+            Controls.Add(label13);
             Controls.Add(label12);
             Controls.Add(label10);
             Controls.Add(label11);
@@ -316,7 +336,6 @@
             Controls.Add(button6);
             Controls.Add(label6);
             Controls.Add(button5);
-            Controls.Add(textBox6);
             Controls.Add(label5);
             Controls.Add(button4);
             Controls.Add(button3);
@@ -336,6 +355,7 @@
             Text = "Form1";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -366,6 +386,8 @@
         private PictureBox pictureBox1;
         private Label label10;
         private Label label12;
+        private Label label13;
+        private NumericUpDown numericUpDown1;
     }
 }
                                       
