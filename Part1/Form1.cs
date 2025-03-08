@@ -139,6 +139,18 @@
         private void button4_Click(object sender, EventArgs e) {
             Clipboard.SetText(textBox5.Text);
         }
+
+        private void label1_Click(object sender, EventArgs e) {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e) {
+
+        }
+
+        private void tabPage1_Click_1(object sender, EventArgs e) {
+
+        }
     }
 }
 

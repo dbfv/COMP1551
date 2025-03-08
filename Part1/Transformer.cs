@@ -17,7 +17,7 @@
             return result; //return result which contains transformed string
         }
 
-        public static Array AsciiCode(string input) { //this turn ASCII to int, utilizing above technique
+        public static Array AsciiCode(string input) { //this turns ASCII to int, utilizing above technique
             int[] result = new int[input.Length]; //empty list to contain result, type is int 
             for (int i = 0; i < input.Length; i++) { //use for loop and not foreach so that result[i] can be used later on to assign value to array.
                 int asciiValue = (int)input[i]; //assign ascii value to int form of int

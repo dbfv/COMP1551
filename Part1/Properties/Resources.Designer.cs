@@ -59,5 +59,15 @@ namespace Part1.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pexels_eberhardgross_1287142 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-eberhardgross-1287142", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
