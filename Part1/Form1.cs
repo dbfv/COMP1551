@@ -45,8 +45,12 @@
             }
         }//textbox1_TextChanged
 
-        private void button1_Click(object sender, EventArgs e) {
-            Clipboard.SetText(textBox2.Text);
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(textBox2.Text))
+            {
+                Clipboard.SetText(textBox2.Text);
+            }
         }
 
         private void toolTip1_Popup(object sender, PopupEventArgs e) {
@@ -93,8 +97,8 @@
         }
 
         private void button6_Click(object sender, EventArgs e) {
-            textBox3.Text = "";
-            textBox4.Text = "";
+            textBox3.Text = ""; //reset textbox before displaying new content
+            textBox4.Text = ""; //reset textbox before displaying new content
             textBox2.Text = $"{Transformer.Encode(textBox1.Text, Convert.ToInt16(numericUpDown1.Value))}";
 
             int[] inputCode;
@@ -128,16 +132,28 @@
 
         }
 
-        private void button2_Click(object sender, EventArgs e) {
-            Clipboard.SetText(textBox3.Text);
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(textBox3.Text))
+            {
+                Clipboard.SetText(textBox3.Text);
+            }
         }
 
-        private void button3_Click(object sender, EventArgs e) {
-            Clipboard.SetText(textBox4.Text);
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(textBox4.Text))
+            {
+                Clipboard.SetText(textBox4.Text);
+            }
         }
 
-        private void button4_Click(object sender, EventArgs e) {
-            Clipboard.SetText(textBox5.Text);
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(textBox5.Text))
+            {
+                Clipboard.SetText(textBox5.Text);
+            }
         }
 
         private void label1_Click(object sender, EventArgs e) {
