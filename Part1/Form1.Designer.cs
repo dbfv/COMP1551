@@ -78,7 +78,7 @@ namespace Part1 {
             button6.Location = new Point(735, 14);
             button6.Margin = new Padding(4);
             button6.Name = "button6";
-            button6.Size = new Size(107, 66);
+            button6.Size = new Size(107, 58);
             button6.TabIndex = 2;
             button6.Text = "PRINT";
             button6.UseVisualStyleBackColor = false;
@@ -244,7 +244,7 @@ namespace Part1 {
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.White;
-            pictureBox1.Location = new Point(21, 80);
+            pictureBox1.Location = new Point(23, 80);
             pictureBox1.Margin = new Padding(4);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(687, 89);
@@ -387,9 +387,12 @@ namespace Part1 {
             tabPage1.TabIndex = 0;
             tabPage1.Text = "tabPage1";
             tabPage1.UseVisualStyleBackColor = true;
+            tabPage1.Click += tabPage1_Click;
             // 
             // tabPage2
             // 
+            tabPage2.BackgroundImage = Properties.Resources.Screenshot_2024_07_12_144218;
+            tabPage2.BackgroundImageLayout = ImageLayout.Stretch;
             tabPage2.Location = new Point(4, 29);
             tabPage2.Margin = new Padding(4);
             tabPage2.Name = "tabPage2";

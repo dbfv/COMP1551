@@ -1,4 +1,6 @@
-﻿namespace Part1
+﻿using Part1.classes;
+
+namespace Part1
 {
     public partial class Form1 : Form
     {
@@ -19,7 +21,7 @@
             label5.Text = $"Character count: {textBox1.Text.Length}";  //display character count
             bool enableButton1 = false;
             bool enableButton2 = false;
-            Validator.ValidateString(textBox1.Text, label5);
+            Validator.ValidateString(textBox1.Text);
 
             if (Validator.errorList[0][0] == '✅')
             {
@@ -171,6 +173,16 @@
         private void button4_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(textBox5.Text);
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
