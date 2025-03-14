@@ -1,12 +1,12 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace Part1
+namespace Part1.classes
 {
 
     public static class Validator
     {
         public static string[] errorList = new string[3]; //create array to store the error messages with 3 messages max
-        public static void ValidateString(string S, Label label)
+        public static void ValidateString(string S)
         {  //static method to validate String S
             if (S.Length == 0)
             { //if the string is empty 
@@ -36,7 +36,6 @@ namespace Part1
             }
 
         } // end of validateString
-
     } //end of class 
 } //end of namespace
 
