@@ -63,9 +63,29 @@ namespace Part1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap f51d95b26e2e8242a81e07d15fce6f9f {
+            get {
+                object obj = ResourceManager.GetObject("f51d95b26e2e8242a81e07d15fce6f9f", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pexels_eberhardgross_1287142 {
             get {
                 object obj = ResourceManager.GetObject("pexels-eberhardgross-1287142", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2024_07_12_144218 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2024-07-12 144218", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
