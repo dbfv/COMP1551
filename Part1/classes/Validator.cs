@@ -34,7 +34,6 @@ namespace Part1.classes
                     errorList[1] = "✅ String only contains uppcase letters.";
                 }
             }
-
         } // end of validateString
     } //end of class 
 } //end of namespace
