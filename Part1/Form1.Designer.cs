@@ -428,7 +428,6 @@ namespace Part1 {
         private Button button6;
         private Label label6;
         private Label label4;
-        private TextBox textBox6;
         private Button button3;
         private Button button2;
         private Button button1;
@@ -439,7 +438,6 @@ namespace Part1 {
         private Label label2;
         private Label label1;
         private TextBox textBox1;
-        private ToolTip toolTip1;
         private PictureBox pictureBox1;
         private Label label10;
         private Label label12;
