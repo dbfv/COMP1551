@@ -21,7 +21,8 @@ namespace Part1
             label5.Text = $"Character count: {textBox1.Text.Length}";  //display character count
             bool enableButton1 = false;
             bool enableButton2 = false;
-            Validator.ValidateString(textBox1.Text);
+            Validator.S = textBox1.Text;
+            
 
             if (Validator.errorList[0][0] == '✅')
             {
@@ -138,7 +139,11 @@ namespace Part1
             }
 
             textBox5.Text = Transformer.Sort(textBox1.Text);
-        }
+
+            DataManager.WriteToFile();
+
+        }//button6_Click
+        
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
