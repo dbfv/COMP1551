@@ -29,49 +29,62 @@ namespace Part1.classes
             connection = new MySqlConnection(connectionString);
         }
         //open connection to database
-        private bool isOpenConnection()
+        private bool OpenConnection()
         {
             connection.Open();
             return true;
         }
 
         //Close connection
-        private bool isCloseConnection()
+        private bool CloseConnection()
         {
             connection.Close();
             return true;
         }
 
         //Insert statement
-        public void Insert(string inputString, string encodeValue, string encodedString, string inputCode, string outputCode, string sortedString)
+        public void Insert(string inputString, int encodeValue, string encodedString, string inputCode, string outputCode, string sortedString)
         {
             DateTime currentDateTime = DateTime.Now;
-            string formattedDateTime = currentDateTime.ToString("HH:mm dd/MM/yyyy"); // Format to "HH:mm dd/MM/yyyy"
+            string formattedDateTime = currentDateTime.ToString("yyyy-MM-dd HH:mm:ss"); // Format to "yyyy-MM-dd HH:mm:ss"
 
-            string query = $"INSERT INTO strings (inputString, encodeValue, encodedString, inputCode, outputCode, sortedString) VALUES({formattedDateTime}, {inputString}, {encodeValue}, {encodedString}, {inputCode}, {outputCode}, {sortedString})";
+            string query = $"INSERT INTO strings (datetime, inputString, encodeValue, encodedString, inputCode, outputCode, sortedString) VALUES('{formattedDateTime}', '{inputString}', {encodeValue}, '{encodedString}', '{inputCode}', '{outputCode}', '{sortedString}')";
 
             //open connection
-            if (isOpenConnection() == true)
+            if (OpenConnection() == true)
             {
                 //create command and assign the query and connection from the constructor
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 //Execute command
                 cmd.ExecuteNonQuery();
                 //close connection
-                isCloseConnection();
+                CloseConnection();
             }
         }
 
 
-        //Update statement
-        public void Update()
-        {
-            string query = "UPDATE tableinfo SET name='Joe', age='22' WHERE name='John Smith'";
-            //Open connection
-            if (isOpenConnection() == true)
-            {
 
-            }
-        }
+        //    public DataTable GetAllRecords()
+        //    {
+        //        DataTable dataTable = new DataTable();
+
+        //        if (OpenConnection() == true)
+        //        {
+        //            //string query = $"INSERT INTO strings (formattedDateTime, inputString, encodeValue, encodedString, inputCode, outputCode, sortedString) VALUES('{formattedDateTime}', '{inputString}', {encodeValue}, '{encodedString}', '{inputCode}', '{outputCode}', '{sortedString}')";
+
+        //            using (MySqlCommand command = new MySqlCommand(query, connection))
+        //            {
+        //                using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
+        //                {
+        //                    adapter.Fill(dataTable);
+        //                }
+        //            }
+        //            connection.Close();
+        //        }
+        //        return dataTable;
+        //    }
+
+
+        //}
     }
 }
