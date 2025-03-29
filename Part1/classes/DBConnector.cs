@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using System.Data;
+using MySql.Data.MySqlClient;
 
 namespace Part1.classes
 {
@@ -64,27 +65,27 @@ namespace Part1.classes
 
 
 
-        //    public DataTable GetAllRecords()
-        //    {
-        //        DataTable dataTable = new DataTable();
+        public DataTable GetAllRecords()
+        {
+            DataTable dataTable = new DataTable();
+            string query = "SELECT * FROM strings ORDER BY datetime DESC";
 
-        //        if (OpenConnection() == true)
-        //        {
-        //            //string query = $"INSERT INTO strings (formattedDateTime, inputString, encodeValue, encodedString, inputCode, outputCode, sortedString) VALUES('{formattedDateTime}', '{inputString}', {encodeValue}, '{encodedString}', '{inputCode}', '{outputCode}', '{sortedString}')";
-
-        //            using (MySqlCommand command = new MySqlCommand(query, connection))
-        //            {
-        //                using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
-        //                {
-        //                    adapter.Fill(dataTable);
-        //                }
-        //            }
-        //            connection.Close();
-        //        }
-        //        return dataTable;
-        //    }
-
-
-        //}
+            if (OpenConnection())
+            {
+                try
+                {
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
+                    {
+                        adapter.Fill(dataTable);
+                    }
+                }
+                finally
+                {
+                    CloseConnection();
+                }
+            }
+            return dataTable;
+        }
     }
 }

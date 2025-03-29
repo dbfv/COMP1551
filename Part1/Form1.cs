@@ -1,4 +1,5 @@
-﻿using Part1.classes;
+﻿using System.Data;
+using Part1.classes;
 
 namespace Part1
 {
@@ -14,7 +15,50 @@ namespace Part1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Get the data from database
+            DataTable dt = dBConnector.GetAllRecords();
 
+            // Clear existing columns
+            dataGridView1.Columns.Clear();
+
+            // Configure the specific columns we want to show
+            dataGridView1.AutoGenerateColumns = false;
+
+            // Add and configure the DateTime column with specific sizing
+            DataGridViewTextBoxColumn datetimeColumn = new()
+            {
+                Name = "datetime",
+                HeaderText = "Date Time",
+                DataPropertyName = "datetime",
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells, // makes the column fit it's content
+                MinimumWidth = 125  //width of column
+            };
+            dataGridView1.Columns.Add(datetimeColumn);
+
+            // Add other columns
+            dataGridView1.Columns.Add("inputString", "Input String");
+            dataGridView1.Columns["inputString"].DataPropertyName = "inputString";
+
+            // Add and configure the Encode Value column with specific sizing
+            DataGridViewTextBoxColumn encodeValueColumn = new()
+            {
+                Name = "encodeValue",
+                HeaderText = "Encode Value",
+                DataPropertyName = "encodeValue",
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells,
+            };
+            dataGridView1.Columns.Add(encodeValueColumn);
+
+            // Set the data source
+            dataGridView1.DataSource = dt;
+
+            // Adjust columns after data is loaded
+            dataGridView1.Columns["datetime"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+            // Prevent users from resizing the columns
+            dataGridView1.Columns["datetime"].Resizable = DataGridViewTriState.False;
+            dataGridView1.Columns["encodeValue"].Resizable = DataGridViewTriState.False;
+            dataGridView1.Columns["inputString"].Resizable = DataGridViewTriState.False;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -141,9 +185,17 @@ namespace Part1
 
             textBox5.Text = Transformer.Sort(textBox1.Text);
 
+            // Insert the new record
             dBConnector.Insert(textBox1.Text, Convert.ToInt16(numericUpDown1.Value), textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text);
 
-        }//button6_Click
+            // Refresh the DataGridView with updated data
+            DataTable dt = dBConnector.GetAllRecords();
+            dataGridView1.DataSource = dt;
+
+            // Re-apply the column sizing for datetime
+            dataGridView1.Columns["datetime"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.Columns["datetime"].Resizable = DataGridViewTriState.False;
+        }
 
 
         private void textBox3_TextChanged(object sender, EventArgs e)
