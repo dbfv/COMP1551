@@ -367,7 +367,7 @@ namespace Part1 {
             tabPage1.Padding = new Padding(3);
             tabPage1.Size = new Size(677, 400);
             tabPage1.TabIndex = 0;
-            tabPage1.Text = "tabPage1";
+            tabPage1.Text = "Convertion 🔄️";
             tabPage1.UseVisualStyleBackColor = true;
             tabPage1.Click += tabPage1_Click;
             // 
@@ -382,7 +382,7 @@ namespace Part1 {
             tabPage2.Padding = new Padding(3);
             tabPage2.Size = new Size(677, 400);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "tabPage2";
+            tabPage2.Text = "History 🕛";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
@@ -392,6 +392,7 @@ namespace Part1 {
             dataGridView1.Margin = new Padding(2, 3, 2, 3);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridView1.ScrollBars = ScrollBars.None;
             dataGridView1.Size = new Size(371, 317);
             dataGridView1.TabIndex = 3;
