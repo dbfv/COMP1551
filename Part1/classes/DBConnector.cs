@@ -5,6 +5,7 @@ namespace Part1.classes
 {
     class DBConnector
     {
+        // Private fields encapsulating database connection details
         private MySqlConnection connection;
         private string server;
         private string database;
@@ -64,7 +65,7 @@ namespace Part1.classes
         }
 
 
-
+        //Display all records from the database
         public DataTable GetAllRecords()
         {
             DataTable dataTable = new DataTable();

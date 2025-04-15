@@ -9,7 +9,7 @@ namespace Part1
         public Form1()
         {
             InitializeComponent();
-            Text = "I like yo cut G"; //change window's name (title)
+            Text = "String Processor"; //change window's name (title)
             dBConnector = new DBConnector();
         }
 
@@ -167,23 +167,28 @@ namespace Part1
         {
             textBox3.Text = "";
             textBox4.Text = "";
-            textBox2.Text = $"{Transformer.Encode(textBox1.Text, Convert.ToInt16(numericUpDown1.Value))}";
+            textBox2.Text = $"{StringProcess.Encode(textBox1.Text, Convert.ToInt16(numericUpDown1.Value))}";
 
             int[] inputCode;
-            inputCode = (int[])Transformer.AsciiCode(textBox1.Text);
+            inputCode = (int[])StringProcess.AsciiCode(textBox1.Text);
             foreach (int num in inputCode)
             {
                 textBox3.Text += num;
             }
 
             int[] outputCode;
-            outputCode = (int[])Transformer.AsciiCode(textBox2.Text);
+            outputCode = (int[])StringProcess.AsciiCode(textBox2.Text);
             foreach (int num in outputCode)
             {
                 textBox4.Text += num;
             }
 
-            textBox5.Text = Transformer.Sort(textBox1.Text);
+            textBox5.Text = StringProcess.Sort(textBox1.Text);
+
+            button1.Enabled = true;
+            button2.Enabled = true;
+            button3.Enabled = true;
+            button4.Enabled = true;
 
             // Insert the new record
             dBConnector.Insert(textBox1.Text, Convert.ToInt16(numericUpDown1.Value), textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text);

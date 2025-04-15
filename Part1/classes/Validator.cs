@@ -5,7 +5,9 @@ namespace Part1.classes
 
     public static class Validator
     {
-        //                      ###ENSURE ENCAPSULATION ###
+        public static string[] errorList = new string[2]; //create array to store the error messages with 2 messages max
+
+        //                      ### ENSURE ENCAPSULATION  ###
         private static string inputString; //this is the internal variable to store the string     
         public static string S //this is the property to access the internal variable
         {
@@ -15,12 +17,12 @@ namespace Part1.classes
             }
             set
             {
+                // ### UTILISE DATA VALIDATION VIA PROPERTY ###
                 inputString = value;
                 ValidateString();
             }
         }
 
-        public static string[] errorList = new string[3]; //create array to store the error messages with 3 messages max
 
         private static void ValidateString()
         {  //static method to validate String S
